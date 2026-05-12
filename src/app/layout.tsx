@@ -26,11 +26,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className="h-full antialiased">
       <head>
-        <link
-          rel="shortcut icon"
-          href="/images/digital-services.png"
-          type="image/png"
-        />
+        <link rel="icon" href="/favicon-diamond-light.svg" type="image/svg+xml" media="(prefers-color-scheme: light)" />
+        <link rel="icon" href="/favicon-diamond-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
       </head>
       <body className="min-h-full flex flex-col">
         <ThemeProvider

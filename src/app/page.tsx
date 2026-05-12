@@ -29,6 +29,7 @@ const projects = [
     desc: "Modern online gifting platform with occasion-based filtering, personalized recommendations, secure payment processing, and real-time inventory management.",
     tech: "Node.js · MongoDB · Express · React",
     metrics: ["E-Commerce", "Payment API", "Live"],
+    image: "/images/projects/85gifts.png",
     href: "https://www.85gifts.com/",
   },
   {
@@ -37,6 +38,7 @@ const projects = [
     desc: "High-performance business website with responsive design, SEO optimization, and clean architecture for fast load times and smooth UX across all devices.",
     tech: "HTML · CSS · JavaScript",
     metrics: ["Responsive", "SEO", "Live"],
+    image: "/images/projects/jbees.png",
     href: "https://jbees.com.ng",
   },
   {
@@ -45,6 +47,7 @@ const projects = [
     desc: "Online clothing store with category-based filtering, media-rich product displays, admin upload dashboard, and PCI-compliant checkout with real-time inventory.",
     tech: "Node.js · MongoDB · Express · React",
     metrics: ["E-Commerce", "Admin Panel", "Live"],
+    image: "/images/projects/sagesilk.jpg",
     href: "https://sage-silk-gpxx.onrender.com/",
   },
   {
@@ -53,6 +56,7 @@ const projects = [
     desc: "Specialized platform for external auditors and eateries to collaborate on financial reviews with secure logins, data entry, and centralized reporting.",
     tech: "Node.js · Express · EJS",
     metrics: ["Secure Auth", "Reporting", "Live"],
+    image: "/images/projects/audit.png",
     href: "https://audita-rfxa.onrender.com",
   },
   {
@@ -61,6 +65,7 @@ const projects = [
     desc: "Fast movie streaming and download platform with admin dashboard, genre browsing, and Netflix-inspired UX built on a scalable Node.js backend.",
     tech: "Node.js · Express · MongoDB",
     metrics: ["Streaming", "Admin Panel", "Live"],
+    image: "/images/projects/streamhive.png",
     href: "https://streamhiveapp.onrender.com",
   },
   {
@@ -69,6 +74,7 @@ const projects = [
     desc: "API-powered contact form builder with custom forms, webhook notifications, spam protection, analytics, and full dark mode support.",
     tech: "Node.js · Express · EJS",
     metrics: ["SaaS", "API-first", "Live"],
+    image: "/images/projects/submissio.png",
     href: "http://submissio.onrender.com/",
   },
   {
@@ -77,6 +83,7 @@ const projects = [
     desc: "Comprehensive business solutions platform with technology implementation, human capital development, and digital market presence.",
     tech: "HTML · CSS · JavaScript · Bootstrap",
     metrics: ["Business", "Responsive", "Live"],
+    image: "/images/projects/konnecticus.png",
     href: "https://konnecticus.netlify.app/",
   },
   {
@@ -85,6 +92,7 @@ const projects = [
     desc: "Premier beauty and style platform with expert service booking, intuitive UI, and responsive design for hair, nails, wigs, and luxury accessories.",
     tech: "HTML · CSS · JavaScript",
     metrics: ["Booking", "Responsive", "Live"],
+    image: "/images/projects/stellaempire.png",
     href: "http://stellaempire.netlify.app/",
   },
   {
@@ -93,6 +101,7 @@ const projects = [
     desc: "Online food ordering platform with live delivery tracking, restaurant connections, and a smooth ordering experience built on MongoDB and React.",
     tech: "MongoDB · React",
     metrics: ["Delivery", "Real-time", "Live"],
+    image: "/images/projects/jhokitchen.jpg",
     href: "https://jhokitchen.netlify.app/",
   },
 ];
@@ -482,12 +491,21 @@ export default function HomePage() {
               className="group reveal relative border border-foreground p-6 block hover:bg-foreground hover:text-background transition-colors duration-200"
             >
               <Crosshairs />
-              <div className="flex items-center justify-between label-mono mb-6">
+              <div className="flex items-center justify-between label-mono mb-4">
                 <span>PLATE {p.id}</span>
                 <span className="dotted-h flex-1 mx-4 text-current opacity-60" />
                 <span className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1">
                   ↗ OPEN
                 </span>
+              </div>
+
+              <div className="-mx-6 -mt-2 mb-5 overflow-hidden border-b border-foreground">
+                <img
+                  src={p.image}
+                  alt={p.title}
+                  loading="lazy"
+                  className="w-full aspect-[16/10] object-cover grayscale contrast-110 brightness-110 group-hover:grayscale-0 group-hover:contrast-100 group-hover:brightness-100 transition-all duration-500"
+                />
               </div>
 
               <h4 className="text-2xl md:text-3xl font-bold tracking-tight uppercase mb-2">
