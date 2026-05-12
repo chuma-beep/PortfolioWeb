@@ -1,42 +1,116 @@
-# 🚀 ByJove Tech Portfolio
+# Portfolio — Blueprint
 
-Welcome to the **official portfolio** of *ByJove Tech* — where **full stack development** meets **cybersecurity excellence**.
+A single-page developer portfolio styled as an architectural blueprint. Black and white, monospace labels, grid paper backgrounds, and crosshair markers. No gradients, no grays, no rounded corners.
 
-This portfolio site showcases the range of services I provide, from building **secure, scalable web applications** to implementing **robust cybersecurity solutions** designed to protect your digital assets and help your business grow.
+## Quick Start
 
----
+```bash
+npm install
+npm run dev        # → http://localhost:3000
+```
 
-## 🌐 Live Demo
+## How to Customize
 
-Check out the live portfolio here:  
-➡️ [ByJove Tech Portfolio](https://byjovetech.netlify.app/)  
+Everything lives in one file: **`src/app/page.tsx`**. No config files, no CMS.
 
-## 🔍 What You’ll Find Here
+### Your Name & Role
 
-- A **clean, modern layout** with responsive design that works smoothly on all devices  
-- Highlighted projects and services with clear, engaging descriptions  
-- Beautiful images and subtle animations that bring the content to life  
-- Easy navigation and clear calls-to-action for potential clients  
+Near the top of the file, update the hero section:
 
----
+```
+h1 → "Odionye\nJovita."     → your name
+Nav logo → "◇ OJ / ..."      → your initials + role
+Typewriter words → [...]    → roles you cycle through
+LAT ... LON ...             → coordinates / location string
+```
 
-## 🛠️ Technologies Used
+### Hero Bio & Specs
 
-- **HTML5 & CSS3** — for clean structure and styling  
-- **JavaScript** — to add interactivity and animations  
-- **Bootstrap 4** — for responsive grid layouts and components  
-- **Custom CSS animations** — smooth effects for a polished user experience  
+```tsx
+<p> ... your one-paragraph bio ... </p>
+<div>STATUS → ● AVAILABLE</div>
+<div>EXP    → 03+ YR</div>
+<div>SHIP   → WORLDWIDE</div>
+```
 
----
+### About Section (`#about`)
 
-## 💡 Why ByJove Tech?
+Replace the paragraph and the FOCUS/METHOD/OUTPUT labels.
 
-At *ByJove Tech*, I’m passionate about creating software that not only looks great but is **secure**, **scalable**, and tailored to your needs. My mission is to empower businesses by building digital solutions that are as reliable as they are cutting-edge.
+### Tech Stack (`#stack`)
 
----
+Edit the `stack` array near the top of `page.tsx`:
 
-Feel free to explore, and don’t hesitate to reach out if you want to collaborate or learn more!
+```ts
+{ name: "Node.js", note: "primary" },
+{ name: "Docker",  note: "runtime" },
+// add / remove / reorder
+```
 
----
+### Projects (`#projects`)
 
-*Thanks for stopping by — let’s build something amazing together!* 👋
+Edit the `projects` array. Each entry:
+
+```ts
+{
+  id: "P-01",
+  title: "Project Name",
+  desc: "Short description (1-2 sentences).",
+  tech: "Node.js · Express · MongoDB",
+  metrics: ["Metric A", "Metric B", "Live"],
+  href: "https://...",
+}
+```
+
+### Contact (`#contact`)
+
+Update email, GitHub, LinkedIn, and X links. The contact form uses `mailto:` — just change the email address in the `handleSubmit` function.
+
+### Page Metadata
+
+Update **`src/app/layout.tsx`** for `<title>`, `<meta>` description, and Open Graph tags. Update the favicon path if needed.
+
+### Theme
+
+Respects the user's OS-level preference on first visit. A toggle button (◐/◑) in the nav lets them override. Classes are `:root` (light) and `.dark` (dark).
+
+Update color tokens in **`src/app/globals.css`**:
+- `:root` block — light mode (background, foreground, border, input, grid-color)
+- `.dark` block — dark mode (same variables, inverted)
+
+The blueprint grid uses `--grid-color`. Fonts load from `rsms.me/inter` (variable) and system monospace.
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── globals.css     ← theme tokens, grid utilities, cursor, animations
+│   ├── layout.tsx      ← metadata, ThemeProvider
+│   └── page.tsx        ← everything else (data, nav, sections, form)
+├── components/
+│   └── Typewriter.tsx  ← typing/deleting animation
+└── hooks/
+    └── use-reveal.ts   ← scroll-triggered reveal on elements with class "reveal"
+```
+
+## Build & Deploy
+
+```bash
+npm run build    # production build
+npm run start    # serve production build
+```
+
+Deploys to anywhere that hosts Next.js — [Vercel](https://vercel.com), [Netlify](https://netlify.com), or your own server.
+
+## Design
+
+Inspired by architectural blueprints and terminal aesthetics. Every element is intentional:
+
+- **Zero border radius** — sharp corners everywhere
+- **Crosshair markers** — on every bordered container
+- **Dotted measurement lines** — separating sections and metadata
+- **Blueprint grid** — 48px and 12px grid paper backgrounds
+- **Monospace labels** — JetBrains Mono at 10px, uppercase, wide tracking
+- **No color** — only background/foreground swap, no tints or accents
+- **Coordinate readout** — live x/y mouse position in the nav
