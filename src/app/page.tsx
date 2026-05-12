@@ -356,6 +356,24 @@ export default function HomePage() {
               <div className="flex justify-between mt-1"><span>SHIP</span><span>WORLDWIDE</span></div>
             </div>
           </div>
+
+          <div className="mt-10 flex gap-4 flex-wrap">
+            <a
+              href="/images/JovitaResume.pdf"
+              download
+              className="inline-flex items-center gap-2 h-11 px-6 border border-foreground bg-foreground text-background label-mono hover:bg-background hover:text-foreground transition-colors"
+            >
+              ⌁ DOWNLOAD RESUME
+            </a>
+            <a
+              href="/resume.html"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 h-11 px-6 border border-foreground label-mono hover:bg-foreground hover:text-background transition-colors"
+            >
+              ↗ VIEW RESUME
+            </a>
+          </div>
         </div>
 
         {/* Bottom legend */}

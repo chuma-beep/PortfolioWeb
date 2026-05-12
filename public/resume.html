@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Odionye Jovita — Resume</title>
+  <style>
+    :root {
+      --canvas: #f5f4ed;
+      --ink: #1B365D;
+      --text: #1a1a1a;
+      --text-dim: #4a4a4a;
+      --rule: #d9d6ce;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--canvas);
+      color: var(--text);
+      font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
+      font-size: 17px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 64px 24px 96px;
+    }
+
+    header { margin-bottom: 48px; }
+
+    h1 {
+      font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
+      font-size: 36px;
+      font-weight: 500;
+      line-height: 1.15;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+
+    h2 {
+      font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
+      font-size: 13px;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--ink);
+      margin-bottom: 16px;
+    }
+
+    h3 {
+      font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
+      font-size: 19px;
+      font-weight: 500;
+      line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .role {
+      font-size: 18px;
+      color: var(--text-dim);
+      margin-top: 8px;
+    }
+
+    .contact-line {
+      font-size: 14px;
+      color: var(--text-dim);
+      margin-top: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 18px;
+    }
+
+    .contact-line a {
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .contact-line a:hover { text-decoration: underline; }
+
+    hr {
+      border: none;
+      height: 1px;
+      background: var(--rule);
+      margin: 40px 0;
+    }
+
+    section { margin-bottom: 48px; }
+
+    p { font-size: 16px; line-height: 1.55; color: var(--text); }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px 32px;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .project {
+      margin-bottom: 28px;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    .project-name {
+      font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
+      font-size: 17px;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .project-stack {
+      font-size: 13px;
+      color: var(--ink);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .project-desc {
+      font-size: 15px;
+      line-height: 1.55;
+      color: var(--text-dim);
+    }
+
+    .project-link {
+      font-size: 13px;
+      color: var(--ink);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .project-link:hover { text-decoration: underline; }
+
+    .tag {
+      display: inline-block;
+      background: var(--ink);
+      color: var(--canvas);
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 3px 10px;
+      margin-right: 6px;
+      margin-bottom: 6px;
+    }
+
+    footer {
+      font-size: 13px;
+      color: var(--text-dim);
+      margin-top: 64px;
+    }
+
+    @media print {
+      body { padding: 0; max-width: 100%; font-size: 14px; }
+      hr { margin: 24px 0; }
+      section { margin-bottom: 32px; page-break-inside: avoid; }
+    }
+
+    @media (max-width: 480px) {
+      body { padding: 40px 16px 64px; }
+      h1 { font-size: 28px; }
+      .skills-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Odionye Jovita</h1>
+    <div class="role">Full-Stack Developer &amp; Security Engineer</div>
+    <div class="contact-line">
+      <span>Nigeria · Remote</span>
+      <span>·</span>
+      <a href="mailto:jovyodionye@gmail.com">jovyodionye@gmail.com</a>
+      <span>·</span>
+      <a href="https://github.com/byjove19" target="_blank" rel="noreferrer">github.com/byjove19</a>
+      <span>·</span>
+      <a href="https://www.linkedin.com/in/odionye-jovita-042b73290/" target="_blank" rel="noreferrer">LinkedIn</a>
+    </div>
+  </header>
+
+  <hr>
+
+  <section>
+    <h2>Summary</h2>
+    <p>
+      Full-stack developer with 3+ years of experience building secure, scalable web applications and backend
+      systems. Specializing in Node.js, Python, and cloud-native architectures. Delivered 15+ production
+      projects across e-commerce, SaaS, streaming, and business platforms. Passionate about clean code,
+      ethical hacking, and mentoring others on writing secure software.
+    </p>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+      <div>Node.js &mdash; Advanced</div>
+      <div>Python &mdash; Advanced</div>
+      <div>React / Next.js &mdash; Advanced</div>
+      <div>MongoDB &mdash; Advanced</div>
+      <div>PostgreSQL &mdash; Intermediate</div>
+      <div>Express &mdash; Advanced</div>
+      <div>Docker &mdash; Intermediate</div>
+      <div>AWS &mdash; Intermediate</div>
+      <div>REST APIs &mdash; Advanced</div>
+      <div>Cybersecurity &mdash; Advanced</div>
+      <div>Git / CI/CD &mdash; Intermediate</div>
+      <div>C# &mdash; Intermediate</div>
+    </div>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>Selected Projects</h2>
+
+    <div class="project">
+      <div class="project-header">
+        <span class="project-name">85 Gifts</span>
+        <span class="project-stack">Node.js · MongoDB · Express · React</span>
+      </div>
+      <p class="project-desc">
+        Modern online gifting platform with occasion-based filtering, personalized recommendations,
+        secure payment processing, and real-time inventory management.
+        <a class="project-link" href="https://www.85gifts.com/" target="_blank" rel="noreferrer">↗ live</a>
+      </p>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <span class="project-name">Sage & Silk</span>
+        <span class="project-stack">Node.js · MongoDB · Express · React</span>
+      </div>
+      <p class="project-desc">
+        Online clothing store with category-based filtering, media-rich product displays, admin upload
+        dashboard, and PCI-compliant checkout with real-time inventory.
+        <a class="project-link" href="https://sage-silk-gpxx.onrender.com/" target="_blank" rel="noreferrer">↗ live</a>
+      </p>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <span class="project-name">StreamHive</span>
+        <span class="project-stack">Node.js · Express · MongoDB</span>
+      </div>
+      <p class="project-desc">
+        Fast movie streaming and download platform with admin dashboard, genre browsing, and
+        Netflix-inspired UX built on a scalable Node.js backend.
+        <a class="project-link" href="https://streamhiveapp.onrender.com" target="_blank" rel="noreferrer">↗ live</a>
+      </p>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <span class="project-name">Submissio</span>
+        <span class="project-stack">Node.js · Express · EJS</span>
+      </div>
+      <p class="project-desc">
+        API-powered contact form builder with custom forms, webhook notifications, spam protection,
+        analytics, and full dark mode support.
+        <a class="project-link" href="http://submissio.onrender.com/" target="_blank" rel="noreferrer">↗ live</a>
+      </p>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <span class="project-name">Audita</span>
+        <span class="project-stack">Node.js · Express · EJS</span>
+      </div>
+      <p class="project-desc">
+        Specialized platform for external auditors and eateries to collaborate on financial reviews
+        with secure logins, data entry, and centralized reporting.
+        <a class="project-link" href="https://audita-rfxa.onrender.com" target="_blank" rel="noreferrer">↗ live</a>
+      </p>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <span class="project-name">JhoKitchen</span>
+        <span class="project-stack">MongoDB · React</span>
+      </div>
+      <p class="project-desc">
+        Online food ordering platform with live delivery tracking, restaurant connections, and a smooth
+        ordering experience built on MongoDB and React.
+        <a class="project-link" href="https://jhokitchen.netlify.app/" target="_blank" rel="noreferrer">↗ live</a>
+      </p>
+    </div>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>Experience</h2>
+    <div class="project">
+      <div class="project-header">
+        <span class="project-name">Freelance Full-Stack Developer</span>
+        <span class="project-stack">2023 — Present</span>
+      </div>
+      <p class="project-desc">
+        Designed and shipped 15+ web applications for e-commerce, SaaS, streaming, and business
+        clients. Built secure APIs, scalable backends, and responsive UIs. Conducted security
+        assessments and penetration tests for client projects.
+      </p>
+      <div style="margin-top:8px;">
+        <span class="tag">Node.js</span>
+        <span class="tag">React</span>
+        <span class="tag">MongoDB</span>
+        <span class="tag">Docker</span>
+        <span class="tag">Cybersecurity</span>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>Education &amp; Certifications</h2>
+    <div class="project">
+      <div class="project-header">
+        <span class="project-name">Cybersecurity &amp; Ethical Hacking</span>
+        <span class="project-stack">Self-Directed</span>
+      </div>
+      <p class="project-desc">
+        Ongoing study in penetration testing, network security, and vulnerability assessment.
+        Applying security-first principles to all production systems.
+      </p>
+    </div>
+  </section>
+
+  <hr>
+
+  <footer>
+    <p>
+      <a href="/">← Back to portfolio</a>
+      &nbsp;·&nbsp;
+      <a href="/images/JovitaResume.pdf" download>Download PDF</a>
+    </p>
+  </footer>
+</body>
+</html>
